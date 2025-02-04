@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.avis.tests.AvisSearchTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2025-02-04T16:16:56" hostname="MacBook-Pro-de-Javier.local" time="10.879">
+  <properties/>
+  <testcase name="testSearchFunctionality()" classname="com.avis.tests.AvisSearchTest" time="10.879"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[[Test worker] INFO io.github.bonigarcia.wdm.WebDriverManager - Using chromedriver 132.0.6834.159 (resolved driver for Chrome 132)
+[Test worker] INFO io.github.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as /Users/javiervillaltaceva/.cache/selenium/chromedriver/mac-arm64/132.0.6834.159/chromedriver
+feb 04, 2025 5:16:56 P. M. org.openqa.selenium.remote.service.DriverService$Builder getLogOutput
+INFO: Driver logs no longer sent to console by default; https://www.selenium.dev/documentation/webdriver/drivers/service/#setting-log-output
+feb 04, 2025 5:16:59 P. M. org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find CDP implementation matching 132
+feb 04, 2025 5:16:59 P. M. org.openqa.selenium.chromium.ChromiumDriver lambda$new$4
+WARNING: Unable to find version of CDP to use for . You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.10.0` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
+]]></system-err>
+</testsuite>
