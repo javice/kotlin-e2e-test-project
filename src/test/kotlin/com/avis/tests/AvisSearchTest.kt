@@ -27,12 +27,12 @@ class AvisSearchTest {
 
     @Test
     fun testSearchFunctionality() {
-        val currenDate = LocalDate.now()
-        //val futureDate = currenDate.plusDays(2)
+        val currenDate = LocalDate.now().dayOfMonth
+        val futureDate = currenDate + 2
         val currentHour = LocalTime.now().hour
         val futureHour = currentHour + 1
         homePage.acceptCookiesButton()
-        homePage.searchFor("MAD", "BCN", currenDate.dayOfMonth,7 ,currentHour, futureHour)
+        homePage.searchFor("MAD", "BCN", currenDate,currentHour ,futureDate, futureHour)
         searchResultsPage = AvisSearchResultsPage(driver)
         assertTrue(searchResultsPage.areResultsDisplayed(), "No se encontraron resultados de búsqueda")
     }

@@ -61,17 +61,17 @@ class AvisHomePage(private val driver: WebDriver) {
 
     fun selectDate(driver: WebDriver, day: Int, pickup: Int) {
         val wait = WebDriverWait(driver, Duration.ofSeconds(10))
-        val defDay = day -12
+
         if (pickup == 0) {
             val dayButton: WebElement = wait.until(ExpectedConditions.elementToBeClickable(
-                By.xpath("//*[@id=\"getAQuote\"]/div[3]/div[1]/div/div[1]/div/div/div[1]/table/tbody/tr[2]/td[$day]/button")
-                //*[@id="getAQuote"]/div[3]/div[1]/div/div[1]/div/div/div[1]/table/tbody/tr[2]/td[3]/button
+                By.xpath("//*[@id=\"getAQuote\"]/div[3]/div[1]/div/div[1]/div/div/div[1]/table/tbody/tr[2]/td[$day-1]/button")
+
             ))
             dayButton.click()
         } else{
             val dayButton: WebElement = wait.until(ExpectedConditions.elementToBeClickable(
-                //*[@id="getAQuote"]/div[3]/div[2]/div/div[1]/div/div/div[1]/table/tbody/tr[2]/td[4]/button
-                By.xpath("//*[@id=\"getAQuote\"]/div[3]/div[2]/div/div[1]/div/div/div[1]/table/tbody/tr[2]/td[$defDay]/button")
+
+                By.xpath("//*[@id=\"getAQuote\"]/div[3]/div[2]/div/div[1]/div/div/div[1]/table/tbody/tr[2]/td[$day+1]/button")
 
             ))
             dayButton.click()
@@ -84,7 +84,7 @@ class AvisHomePage(private val driver: WebDriver) {
         if (pickup == 0){
             val hourSelect: WebElement = wait.until(ExpectedConditions.elementToBeClickable(
                 By.xpath("//*[@id=\"getAQuote\"]/div[3]/div[1]/div/div[2]/div/div/ul/li[($hour*2)+1]")
-                //*[@id="getAQuote"]/div[3]/div[2]/div/div[2]/div/div[2]/ul/li[35]
+
             ))
             hourSelect.click()
         } else {
